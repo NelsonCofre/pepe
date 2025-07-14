@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Configuración - Eco Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-section">
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <button id="toggleSidebar" class="toggle-sidebar">☰</button>
+          <h3>CRM WEB</h3>
+        </div>
+
+        <ul>
+          <li><a href="dashboard.html">📦 Stock</a></li>
+          <li><a href="clientes.html">👥 Clientes</a></li>
+          <li><a href="reportes.html">📈 Reportes</a></li>
+          <li><a href="configuracion.html">⚙️ Configuración</a></li>
+          <li><a href="#" id="logoutLink">🚪 Cerrar Sesión</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="perfil-usuario">
+          <img
+            src="img/user-default.png"
+            alt="Imagen de perfil"
+            class="perfil-imagen"
+          />
+
+          <div class="perfil-datos">
+            <p><strong>Email:</strong> <span id="perfil-email"></span></p>
+            <p>
+              <strong>Contraseña actual:</strong>
+              <span id="perfil-password"></span>
+            </p>
+          </div>
+
+          <div class="cambiar-password">
+            <h4>Cambiar contraseña</h4>
+            <input
+              type="password"
+              id="nueva-password"
+              placeholder="Nueva contraseña"
+            />
+            <button onclick="guardarNuevaPassword()">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de logout -->
+    <div id="logoutModal" class="modal hidden">
+      <div class="modal-content">
+        <p>¿Estás seguro que quieres cerrar sesión?</p>
+        <div class="modal-buttons">
+          <button id="confirmLogout">Sí, cerrar sesión</button>
+          <button id="cancelLogout">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/configuracion.js"></script>
+  </body>
+</html>

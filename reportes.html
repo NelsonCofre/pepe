@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes - Eco Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-section">
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <button id="toggleSidebar" class="toggle-sidebar">☰</button>
+          <h3>CRM WEB</h3>
+        </div>
+
+        <ul>
+          <li><a href="dashboard.html">📦 Stock</a></li>
+          <li><a href="clientes.html">👥 Clientes</a></li>
+          <li><a href="reportes.html">📈 Reportes</a></li>
+          <li><a href="configuracion.html">⚙️ Configuración</a></li>
+          <li><a href="#" id="logoutLink">🚪 Cerrar Sesión</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div id="reportes" class="content-section">
+          <h2>Historial de Acciones</h2>
+
+          <h3>🟢 Productos Agregados</h3>
+          <ul id="log-agregados" class="log-list"></ul>
+
+          <h3>🟡 Productos Modificados</h3>
+          <ul id="log-modificados" class="log-list"></ul>
+
+          <h3>🔴 Productos Eliminados</h3>
+          <ul id="log-eliminados" class="log-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="logoutModal" class="modal hidden">
+      <div class="modal-content">
+        <p>¿Estás seguro que quieres cerrar sesión?</p>
+        <div class="modal-buttons">
+          <button id="confirmLogout">Sí, cerrar sesión</button>
+          <button id="cancelLogout">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/reportes.js"></script>
+    <script src="js/dashboard.js"></script>
+
+  </body>
+</html>
